@@ -3,8 +3,8 @@ const fs = require("fs/promises");
 
 async function comments() {
   try {
-    const list = require("./List_Sorted_ID.json");
-    for (let i = 0; i < list.length; i++) {
+    const list = require("./jsons/List_Sorted_ID.json");
+    for (let i = 0; i <= list.length; i++) {
       const url = list[i].Post.URL;
       // launching a browser
       const browser = await puppeteer.launch({
@@ -29,13 +29,13 @@ async function comments() {
             const userName =
               postTag.querySelector(".author.may-blank").textContent;
             const comment = postTag.querySelector(".md").textContent;
-            const points = postTag.querySelector(".score.unvoted").textContent;
+            /* const points = postTag.querySelector(".score.unvoted").textContent; */
 
             commentlist.push({
               Date: dateTime,
               User: userName,
               Comment: comment,
-              Points: points,
+              /* Points: points, */
             });
           } catch (error) {
             console.error(
@@ -54,7 +54,7 @@ async function comments() {
 
       // Write the updated list to a JSON file
       await fs.writeFile(
-        "List_Comments.json",
+        "jsons/List_Comments.json",
         JSON.stringify(list, null, "\t")
       );
       await browser.close();
@@ -64,5 +64,5 @@ async function comments() {
     console.error("Error during comments():", error);
   }
 }
-/* comments(); */
+comments();
 module.exports = { comments };

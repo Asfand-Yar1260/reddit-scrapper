@@ -53,13 +53,17 @@ async function posts() {
         });
         return postList;
       }, postList);
+
       // click next
-      await page.click("#siteTable > div.nav-buttons > span > span");
+      /* await page.click("#siteTable > div.nav-buttons > span > span"); */
     }
     // ---> loop needs to end here.
 
     //writing to a JSON file
-    await fs.writeFile("Listfull.json", JSON.stringify(grabPosts, null, "\t"));
+    await fs.writeFile(
+      "jsons/List.json",
+      JSON.stringify(grabPosts, null, "\t")
+    );
     //terminating the browser
     await browser.close();
     console.log("----> Posts scrapped 'Successfully'.");
@@ -67,5 +71,5 @@ async function posts() {
     console.error("Error during posts():", error);
   }
 }
-/* scrap(); */
+/* posts(); */
 module.exports = { posts };
