@@ -6,7 +6,7 @@ async function scrapPosts() {
   try {
     // lauching a browser window
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: "new",
       defaultViewport: false,
     });
 
