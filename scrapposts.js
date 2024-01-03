@@ -61,6 +61,7 @@ async function scrapPosts() {
         });
         return postList;
       });
+      // naming the file based on current date.
       const currentDate = new Date()
         .toISOString()
         .replace(/:/g, "-")
