@@ -39,9 +39,7 @@ async function grabPosts() {
           const postURL = anchorElement ? anchorElement.href : "N/A";
 
           const scoreElement = post.querySelector("div.score.unvoted");
-          const upVotes = scoreElement
-            ? scoreElement.textContent.trim()
-            : "N/A";
+          const upVotes = scoreElement ? scoreElement.title.trim() : "N/A";
 
           const commentsElement = post.querySelector("a.comments");
           const comments = commentsElement
@@ -50,13 +48,13 @@ async function grabPosts() {
 
           let engagement;
           if (
-            (upVotes == "•" || upVotes == "N/A") &&
-            (comments == "•" || comments == "N/A")
+            (upVotes == "•" || upVotes == "N/A" || upVotes == "") &&
+            (comments == "•" || comments == "N/A" || comments == "")
           ) {
             engagement = 0;
-          } else if (upVotes == "•" || upVotes == "N/A") {
+          } else if (upVotes == "•" || upVotes == "N/A" || upVotes == "") {
             engagement = parseInt(comments);
-          } else if (comments == "•" || comments == "N/A") {
+          } else if (comments == "•" || comments == "N/A" || comments == "") {
             engagement = parseInt(upVotes);
           } else {
             engagement = parseInt(upVotes) + parseInt(comments);
