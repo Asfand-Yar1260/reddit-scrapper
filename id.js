@@ -9,7 +9,7 @@ async function id() {
       .toISOString()
       .replace(/:/g, "-")
       .slice(0, -14);
-    const filePath = `jsons/Sorted_List_${currentDate}.json`;
+    const filePath = `jsons/${currentDate}/Sorted_List_${currentDate}.json`;
 
     //reading the file
     let sortedList = [];

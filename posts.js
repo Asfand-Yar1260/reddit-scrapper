@@ -125,9 +125,6 @@ async function posts() {
       console.log(`Data written to ${filePath}`);
 
       try {
-        // ... existing code ...
-
-        // Add this after each relevant block of code
         console.log("Successfully completed page #", i);
       } catch (error) {
         console.error("Error during page #", i, error);
@@ -151,9 +148,9 @@ async function posts() {
     //closing the page and browser after scrapping
     await page.close();
     await browser.close();
-    console.log("Post 'Grabbing' Complete.");
+    console.log("Post 'Scrapping' Complete.");
   } catch (error) {
-    console.log("Error during 'Grabbing' Posts.");
+    console.log("Error during 'Scrapping' Posts.");
     console.error(error);
   }
 }

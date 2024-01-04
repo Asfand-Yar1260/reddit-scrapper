@@ -8,7 +8,7 @@ async function sort() {
       .toISOString()
       .replace(/:/g, "-")
       .slice(0, -14);
-    const filePath = `jsons/List_${currentDate}.json`;
+    const filePath = `jsons/${currentDate}/List_${currentDate}.json`;
 
     //reading the file
     let unsortedData = [];
