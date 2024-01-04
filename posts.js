@@ -154,6 +154,9 @@ async function posts() {
     console.error(error);
   }
 }
+
+// Call the function to initiate the post scraping process
 posts();
+
 // exporting the module
 /* module.exports = { scrapPosts }; */

@@ -114,7 +114,7 @@ async function comments() {
   }
 }
 
-// Call the function to initiate the scraping process
+// Call the function to initiate the comment scraping process
 comments();
 
 // exporting the module

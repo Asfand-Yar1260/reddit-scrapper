@@ -32,6 +32,8 @@ async function sort() {
   }
 }
 
+// Call the function to initiate the sorting process
 sort();
+
 // exporting the module
 /* module.exports = { sort }; */

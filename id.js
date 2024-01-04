@@ -29,6 +29,9 @@ async function id() {
     console.error(error);
   }
 }
+
+// Call the function to initiate the id assigning process
 id();
+
 // exporting the module
 /* module.exports = { id }; */
