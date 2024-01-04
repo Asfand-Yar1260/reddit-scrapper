@@ -14,7 +14,6 @@ async function sort() {
     let unsortedData = [];
     const fileContent = await fs.readFile(filePath, "utf-8");
     unsortedData = JSON.parse(fileContent);
-    /* const list = require(`jsons/List_${currentDate}.json`); */
 
     //sorting data
     let sortedData = unsortedData.sort((a, b) => {
