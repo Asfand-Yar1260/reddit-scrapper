@@ -23,7 +23,7 @@ async function sort() {
     });
 
     //creating new file for sorted data
-    const newFilePath = `jsons/Sorted_List_${currentDate}.json`;
+    const newFilePath = `jsons/${currentDate}/Sorted_List_${currentDate}.json`;
     await fs.writeFile(newFilePath, JSON.stringify(sortedData, null, "\t"));
     console.log("Sorting Complete.");
   } catch (error) {

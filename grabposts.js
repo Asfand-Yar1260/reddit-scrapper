@@ -1,6 +1,7 @@
 // importing dependencies
 const puppeteer = require("puppeteer");
-const fs = require("fs/promises");
+const fs = require("fs/promises"); // to call function asynchronously.
+const path = require("path"); // to create folders
 
 async function grabPosts() {
   try {
@@ -73,15 +74,25 @@ async function grabPosts() {
         });
         return postList;
       });
-      // naming the file based on current date.
+      // getting current date.
       const currentDate = new Date()
         .toISOString()
         .replace(/:/g, "-")
         .slice(0, -14);
-      const filePath = `jsons/List_${currentDate}.json`;
 
+      //checking if folder exists
+      const folderPath = path.join("jsons", currentDate);
+      // Create the folder using promises
+      fs.mkdir(folderPath)
+        .then(() => {
+          console.log(`Folder "${currentDate}" created at "${folderPath}"`);
+        })
+        .catch((error) => {
+          console.log(`Folder already exists!`);
+        });
+      //checking if file exists
+      const filePath = `jsons/${currentDate}/List_${currentDate}.json`;
       let existingData = [];
-
       try {
         const fileContent = await fs.readFile(filePath, "utf-8");
         existingData = JSON.parse(fileContent);
