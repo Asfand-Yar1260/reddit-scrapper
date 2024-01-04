@@ -33,4 +33,5 @@ async function sort() {
 }
 
 sort();
+// exporting the module
 /* module.exports = { sort }; */
