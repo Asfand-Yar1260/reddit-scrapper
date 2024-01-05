@@ -24,14 +24,14 @@ async function id() {
     //creating new file for sorted data
     const newFilePath = `jsons/${currentDate}/Id_Sorted_List_${currentDate}.json`;
     await fs.writeFile(newFilePath, JSON.stringify(sortedList, null, "\t"));
-    console.log("Ids Assigned.");
+    console.log("----> Ids Assigned. <----");
   } catch (error) {
     console.error(error);
   }
 }
 
 // Call the function to initiate the id assigning process
-id();
+/* id(); */
 
 // exporting the module
-/* module.exports = { id }; */
+module.exports = { id };

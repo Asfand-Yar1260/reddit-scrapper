@@ -148,7 +148,7 @@ async function posts() {
     //closing the page and browser after scrapping
     await page.close();
     await browser.close();
-    console.log("Post 'Scrapping' Complete.");
+    console.log("----> Post 'Scrapping' Complete. <----");
   } catch (error) {
     console.log("Error during 'Scrapping' Posts.");
     console.error(error);
@@ -156,7 +156,7 @@ async function posts() {
 }
 
 // Call the function to initiate the post scraping process
-posts();
+/* posts(); */
 
 // exporting the module
-/* module.exports = { scrapPosts }; */
+module.exports = { posts };

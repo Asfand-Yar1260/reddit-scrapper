@@ -107,7 +107,7 @@ async function comments() {
     // Close the browser
     await browser.close();
 
-    console.log("Comments 'Scrapping' Complete.");
+    console.log("----> Comments 'Scrapping' Complete. <----");
   } catch (error) {
     console.log("Error during 'Scrapping' Comments.");
     console.log(error);
@@ -115,7 +115,7 @@ async function comments() {
 }
 
 // Call the function to initiate the comment scraping process
-comments();
+/* comments(); */
 
 // exporting the module
-/* module.exports = { comments }; */
+module.exports = { comments };

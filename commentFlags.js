@@ -33,14 +33,14 @@ async function commentFlags() {
         JSON.stringify(list, null, "\t")
       );
     }
-    console.log("----> Flags filtering Complete.");
+    console.log("----> Flags filtering Complete. <----");
   } catch (error) {
     console.log(error);
   }
 }
 
 // Call the function to initiate the filtering process
-commentFlags();
+/* commentFlags(); */
 
 // exporting the module
-/* module.exports = { comments }; */
+module.exports = { commentFlags };

@@ -25,7 +25,7 @@ async function sort() {
     //creating new file for sorted data
     const newFilePath = `jsons/${currentDate}/Sorted_List_${currentDate}.json`;
     await fs.writeFile(newFilePath, JSON.stringify(sortedData, null, "\t"));
-    console.log("Sorting Complete.");
+    console.log("----> Sorting Complete. <----");
   } catch (error) {
     console.log("Error during sort.");
     console.error(error);
@@ -33,7 +33,7 @@ async function sort() {
 }
 
 // Call the function to initiate the sorting process
-sort();
+/* sort(); */
 
 // exporting the module
-/* module.exports = { sort }; */
+module.exports = { sort };
