@@ -1,4 +1,4 @@
-const { main } = require("./main");
+import { main } from "./main";
 
 const section = document.querySelector("#grid-item3");
 const button = section.querySelector(".button");
