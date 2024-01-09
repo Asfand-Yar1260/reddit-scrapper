@@ -1,7 +1,7 @@
 //importing dependencies
-const fs = require("fs/promises");
+import fs from "fs/promises"; // to call function asynchronously.
 
-async function sort() {
+export async function sort() {
   try {
     //checking if the file exists
     const currentDate = new Date()
@@ -33,6 +33,3 @@ async function sort() {
 }
 
 /* sort(); */
-
-// exporting the module
-module.exports = { sort };

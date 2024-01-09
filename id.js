@@ -1,8 +1,8 @@
 //importing dependencies
-const fs = require("fs/promises");
-const uuid = require("uuid"); // to generate unique ids
+import fs from "fs/promises"; // to call function asynchronously.
+import { v4 as uuidv4 } from "uuid"; // to generate unique ids
 
-async function id() {
+export async function id() {
   try {
     //checking if the file exists
     const currentDate = new Date()
@@ -18,7 +18,7 @@ async function id() {
 
     //assigning a unique id key-value pair to each post
     for (let i = 0; i <= 99; i++) {
-      sortedList[i].id = uuid.v4();
+      sortedList[i].id = uuidv4();
     }
 
     //creating new file for sorted data
@@ -29,7 +29,5 @@ async function id() {
     console.error(error);
   }
 }
-/* id(); */
 
-// exporting the module
-module.exports = { id };
+/* id(); */

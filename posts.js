@@ -1,9 +1,9 @@
 // importing dependencies
-const puppeteer = require("puppeteer"); // to scrap from web.
-const fs = require("fs/promises"); // to call function asynchronously.
-const path = require("path"); // to create folders.
+import puppeteer from "puppeteer"; // to scrap from web.
+import fs from "fs/promises"; // to call function asynchronously.
+import path from "path"; // to create folders.
 
-async function posts() {
+export async function posts() {
   try {
     // lauching a browser window
     const browser = await puppeteer.launch({
@@ -154,7 +154,5 @@ async function posts() {
     console.error(error);
   }
 }
-/* posts(); */
 
-// exporting the module
-module.exports = { posts };
+/* posts(); */

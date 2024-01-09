@@ -1,7 +1,8 @@
-const puppeteer = require("puppeteer");
-const fs = require("fs/promises");
+// importing dependencies
+import puppeteer from "puppeteer";
+import fs from "fs/promises"; // to call function asynchronously.
 
-async function comments() {
+export async function comments() {
   try {
     // Get the current date for file naming
     const currentDate = new Date()
@@ -115,6 +116,3 @@ async function comments() {
 
 // Call the function to initiate the scraping process
 /* comments(); */
-
-// exporting the module
-module.exports = { comments };

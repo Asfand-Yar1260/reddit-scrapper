@@ -1,10 +1,10 @@
-const { posts } = require("./posts");
-const { sort } = require("./sort");
-const { id } = require("./id");
-const { comments } = require("./comments");
-const { commentFlags } = require("./commentFlags");
+import { posts } from "./posts.js";
+import { sort } from "./sort.js";
+import { id } from "./id.js";
+import { comments } from "./comments.js";
+import { commentFlags } from "./commentFlags.js";
 
-function main() {
+export function main() {
   posts()
     .then(() => sort())
     .then(() => id())
@@ -16,7 +16,4 @@ function main() {
     });
 }
 
-/* main(); */
-
-// exporting the module
-module.exports = { main };
+main();

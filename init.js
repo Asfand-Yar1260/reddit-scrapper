@@ -1,9 +1,12 @@
-import { main } from "./main";
+/* import { main } from "./main.js"; */
 
 const section = document.querySelector("#grid-item3");
 const button = section.querySelector(".button");
-const dummy = () => {
-  alert("Sequence Initilized!");
-  main();
-};
-button.addEventListener("click", dummy, true);
+
+button.addEventListener(
+  "click",
+  (event) => {
+    button.textContent = "...";
+  },
+  true
+);

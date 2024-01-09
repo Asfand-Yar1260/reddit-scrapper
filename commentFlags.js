@@ -1,7 +1,7 @@
 // importing dependencies
-const fs = require("fs/promises"); // to call function asynchronously.
+import fs from "fs/promises"; // to call function asynchronously.
 
-async function commentFlags() {
+export async function commentFlags() {
   try {
     // getting current date.
     const currentDate = new Date()
@@ -41,6 +41,3 @@ async function commentFlags() {
 
 // Call the function to initiate the filtering process
 /* commentFlags(); */
-
-// exporting the module
-module.exports = { commentFlags };
