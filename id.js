@@ -29,6 +29,7 @@ async function id() {
     console.error(error);
   }
 }
-id();
+/* id(); */
+
 // exporting the module
-/* module.exports = { id }; */
+module.exports = { id };

@@ -32,6 +32,7 @@ async function sort() {
   }
 }
 
-sort();
+/* sort(); */
+
 // exporting the module
-/* module.exports = { sort }; */
+module.exports = { sort };

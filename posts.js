@@ -154,6 +154,7 @@ async function posts() {
     console.error(error);
   }
 }
-posts();
+/* posts(); */
+
 // exporting the module
-/* module.exports = { scrapPosts }; */
+module.exports = { posts };

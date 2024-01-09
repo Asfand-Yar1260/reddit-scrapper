@@ -20,7 +20,7 @@ main {
 /* img control*/
 img {
   max-width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 /* || Specific STYLES */
@@ -32,6 +32,7 @@ img {
 #grid-item2 {
   grid-row: 2/3;
   grid-column: 3/4;
+  margin-right: 5px;
 }
 
 #grid-item3 {
@@ -39,4 +40,16 @@ img {
   grid-column: 3/4;
   align-self: end;
   justify-self: center;
+}
+
+.button {
+  height: 45px;
+  width: 125px;
+  margin: 4px 3px;
+  background-color: orangered;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 20px;
+  font-family: monospace;
+  font-style: bold;
 }

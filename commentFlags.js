@@ -40,7 +40,7 @@ async function commentFlags() {
 }
 
 // Call the function to initiate the filtering process
-commentFlags();
+/* commentFlags(); */
 
 // exporting the module
-/* module.exports = { comments }; */
+module.exports = { commentFlags };

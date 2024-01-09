@@ -2,18 +2,21 @@ const { posts } = require("./posts");
 const { sort } = require("./sort");
 const { id } = require("./id");
 const { comments } = require("./comments");
-const { comment_flags } = require("./comment_flags");
+const { commentFlags } = require("./commentFlags");
 
 function main() {
   posts()
     .then(() => sort())
     .then(() => id())
     .then(() => comments())
-    .then(() => comment_flags())
+    .then(() => commentFlags())
     .catch((error) => console.error("Error:", error))
     .finally(() => {
       console.log("----> All tasks completed!");
     });
 }
 
-main();
+/* main(); */
+
+// exporting the module
+module.exports = { main };

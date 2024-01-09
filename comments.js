@@ -19,7 +19,6 @@ async function comments() {
     const browser = await puppeteer.launch({
       headless: "new",
       defaultViewport: false,
-      channel: "chrome",
     });
 
     // Array to store promises for parallel processing
@@ -115,7 +114,7 @@ async function comments() {
 }
 
 // Call the function to initiate the scraping process
-comments();
+/* comments(); */
 
 // exporting the module
-/* module.exports = { comments }; */
+module.exports = { comments };
